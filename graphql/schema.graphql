@@ -30,6 +30,24 @@ type User {
     "When the email was verified."
     email_verified_at: DateTime
     "When the account was created."
+    posts: [Post!]!
+    created_at: DateTime!
+    "When the account was last updated."
+    updated_at: DateTime!
+}
+
+type Post {
+    "Unique primary key."
+    id: ID
+    "string title."
+    title: String
+    "post description."
+    description: String!
+    "Post Image."
+    image: String!
+    "post Author."
+    user: User
+    "When the account was created."
     created_at: DateTime!
     "When the account was last updated."
     updated_at: DateTime!
